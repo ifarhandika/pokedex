@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eff1f7;
+}
+img {
+    height: 50%;
+    width: 50%;
+    margin: 3rem 0;
+}
+ul {
+    list-style: none;
+}
+
+.card {
+    font-family: "Open Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 1rem;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+}
+.card h3 {
+    font-size: 1rem;
+    text-transform: capitalize;
+}
+.card p {
+    text-transform: uppercase;
+    margin: 1rem 0;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 90%;
+}
+
+#pokemon-name {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.openModalBtn{
+    cursor: pointer;
+    padding: 10px 15px;
+    margin: 10px;
+    background: #ccc;
+    border: none;
+    border-radius: 3px;
+    transition: 0.2s ease;
+}
+.openModalBtn:hover{
+    background: #aaa;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: modal-open 0.3s;
+}
+
+.modal-card {
+    width: 300px;
+    background-color: #f4f4f4;
+    margin: 8% auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+}
+.modal-header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.modal-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.modal-content span{
+    align-self: flex-start;
+}
+.modal-content > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    text-transform: capitalize;
+}
+
+[data-tab-content]{
+    display: none;
+}
+
+.active[data-tab-content]{
+    display: block;
+}
+
+.tab-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 10px 0;
+}
+.tab{
+    cursor: pointer;
+    padding: 5px 20px;
+}
+
+.tab.active{
+    background-color: #ccc;
+}
+.tab:hover{
+    background-color: #aaa;
+}
+
+
+
+
+@keyframes modal-open {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
